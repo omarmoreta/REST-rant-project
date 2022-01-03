@@ -20,7 +20,10 @@ REST-Rant is an app where users can review restaurants.
 
 ### Data structure
 
-| Name        | City        | Cuisines  | Pic    |
-| ----------- | ----------- | --------- | ------ |
-| Mighty Bite | Atlanta, GA | Soul Food | Steak  |
-| String      | String      | String    | String |
+| Field Name | Data Type      |
+| ---------- | -------------- |
+| name       | string         |
+| city       | string         |
+| state      | string         |
+| cuisines   | string         |
+| pic        | string (a URL) |
