@@ -6,11 +6,16 @@ require("dotenv").config();
 const PORT = process.env.PORT;
 const app = express();
 
+// MIDDLEWARE
+app.set("view engine", "jsx");
+app.engine("jsx", require("express-react-views").createEngine());
+
 // ROUTES
 app.use("/places", require("./controllers/places"));
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.render("home");
+  // res.send("Hello World!");
 });
 
 app.get("*", (req, res) => {
