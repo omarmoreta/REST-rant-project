@@ -6,6 +6,18 @@ router.get("/new", (req, res) => {
   res.render("places/new");
 });
 
+// GET /places/:id/edit
+router.get("/:id/edit", (req, res) => {
+  let id = Number(req.params.id);
+  if (isNaN(id)) {
+    res.render("error404");
+  } else if (!places[id]) {
+    res.render("error404");
+  } else {
+    res.render("places/edit", { place: places[id] });
+  }
+});
+
 // GET /places/:id
 router.get("/:id", (req, res) => {
   let id = Number(req.params.id);
@@ -38,15 +50,25 @@ router.post("/", (req, res) => {
   res.redirect("/places");
 });
 
-// // PUT /places/:id/edit
-router.get("/:id/edit", (req, res) => {
+// PUT /places/:id
+router.put("/:id", (req, res) => {
   let id = Number(req.params.id);
   if (isNaN(id)) {
     res.render("error404");
   } else if (!places[id]) {
     res.render("error404");
   } else {
-    res.render("places/edit", { place: places[id] });
+    if (!req.body.pic) {
+      req.body.pic = "https://unsplash.com/photos/SWnviQeRsjI";
+    }
+    if (!req.body.city) {
+      req.body.city = "Anytown";
+    }
+    if (!req.body.state) {
+      req.body.state = "USA";
+    }
+    places[id] = req.body;
+    res.redirect(`/places/${id}`);
   }
 });
 
