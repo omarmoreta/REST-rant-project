@@ -2,8 +2,10 @@ const React = require("react")
 const Def = require("./default")
 
 function error404() {
-    return(
+    return (
         <Def>
+            {/* Was not rendering*/}
+            <link rel="stylesheet" href="../style.css"/>
             <main>
                 <h1>404: PAGE NOT FOUND</h1>
                 <div>

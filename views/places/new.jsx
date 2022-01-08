@@ -4,10 +4,8 @@ const Def = require("../default")
 function new_form() {
     return (
         <Def>
-            <head>
-                {/* Was not rendering*/}
-                <link rel="stylesheet" href="../style.css"/>
-            </head>
+            {/* Was not rendering*/}
+            <link rel="stylesheet" href="../style.css"/>
             <main>
                 <h1>Add a New Place</h1>
                 <form method="POST" action="/places">
