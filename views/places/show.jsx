@@ -1,7 +1,7 @@
 const React = require("react")
 const Def = require("../default")
 
-function show(data) {
+function show (data) {
     return (
         <Def>
             {/* Was not rendering*/}
