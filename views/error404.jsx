@@ -1,6 +1,7 @@
 const React = require("react")
 const Def = require("./default")
 
+// Error layout view
 function error404 () {
     return (
         <Def>

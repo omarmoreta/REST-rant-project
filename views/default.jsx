@@ -1,5 +1,6 @@
 const React = require("react")
 
+// Default layout for all the views
 function Def (html) {
     return (
         <html>

@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+// Creating a schema and model for db
 const placeSchema = new mongoose.Schema({
   name: { type: String, required: true },
   pic: String,
