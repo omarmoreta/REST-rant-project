@@ -7,45 +7,44 @@ function show (data) {
         <Def>
             {/* Was not rendering*/}
             <link rel="stylesheet" href="../style.css"/>
-            <main>
-                <h1>{ data.place.name } Review</h1>
-                <div className="col-sm-6 col-md-4 col-lg-3">
-                    <p className="text-center">
-                        {data.place.cuisines}
-                    </p>
-                </div>
+            <main>                               
                 <div className="row">
-                    <div className="col-sm-6 col-md-4 col-lg-3">
+                    <div className="col-sm-6">                    
                         <img src={data.place.pic} alt={data.place.name}/>
-                        <p className="text-center">
+                        <h3 className="text-center">
                             Located in {data.place.city}, {data.place.state}
-                        </p>
+                        </h3>
+                    </div>                    
+                    <div className="col-sm-6">
+                        <div>
+                            <h1>{ data.place.name }</h1>
+                        </div>
+                        <br/>
+                        <div>
+                            <h1>Rating</h1>
+                            <h2>Not Rated</h2>
+                        </div>
+                        <br/>
+                        <div>
+                            <h1>Description</h1>
+                            <h2>{data.place.showEstablished()}</h2>                         
+                            <h3>Serving {data.place.cuisines}</h3>
+                        </div>        
+                        <br/>
+                        <a href={`/places/${data.id}/edit`} className="btn btn-warning">
+                            Edit
+                        </a>
+                        <form method="POST" action={`/places/${data.id}?_method=DELETE`}> 
+                            <button type="submit" className="btn btn-danger">
+                                Delete
+                            </button>
+                        </form>
                     </div>
-                    <div className="row">
-                        <div className="col-sm-6 col-md-4 col-lg-3">
-                            <h1>Comments</h1>
-                        </div>
-                        <div className="col-sm-6 col-md-4 col-lg-3">
-                            <p>currently there are no comments</p>
-                        </div>
-                        <div className="col-sm-6 col-md-4 col-lg-3">
-                            <h1>Ratings</h1>                            
-                        </div>
-                        <div className="col-sm-6 col-md-4 col-lg-3">
-                            <p>no ratings yet</p>
-                        </div>       
-                        <div className="col-sm-6 col-md-4 col-lg-3">
-                            <a href={`/places/${data.id}/edit`} className="btn btn-warning">
-                                Edit
-                            </a>
-                            <form method="POST" action={`/places/${data.id}?_method=DELETE`}> 
-                                <button type="submit" className="btn btn-danger">
-                                    Delete
-                                </button>
-                            </form>
-                        </div>                           
-                    </div>
-                </div>
+                    <div className="text-center">
+                        <h1>Comments</h1> 
+                        <h2>No Comments</h2> 
+                    </div>            
+                </div>               
             </main>
         </Def>
     )

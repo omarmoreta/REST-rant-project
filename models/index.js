@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+require("dotenv").config();
 
 // Connecting mongodb using mongoose
 mongoose.connect(
