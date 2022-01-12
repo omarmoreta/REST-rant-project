@@ -28,7 +28,7 @@ function show (data) {
                         <div>
                             <h1>Description</h1>
                             <h2>{data.place.showEstablished()}</h2>                         
-                            <h3>Serving {data.place.cuisines}</h3>
+                            <h3>Serving {data.place.cuisines}.</h3>
                         </div>        
                         <br/>
                         <a href={`/places/${data.id}/edit`} className="btn btn-warning">
