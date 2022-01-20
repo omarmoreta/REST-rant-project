@@ -1,7 +1,7 @@
 const db = require("../models");
 
 async function seed() {
-  let place = await db.Place.findOne({ name: "H-Thai-ML" });
+  let place = await db.Place.findOne({ name: "Coding Cat Cafe" });
 
   let comment = await db.Comment.create({
     author: "Famished Fran",
@@ -9,7 +9,9 @@ async function seed() {
     stars: 5.0,
     content: "Wow, simply amazing! Highly recommended!",
   });
+
   place.comments.push(comment.id);
+  await place.save();
   process.exit();
 }
 

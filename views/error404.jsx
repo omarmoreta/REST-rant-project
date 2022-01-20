@@ -5,8 +5,6 @@ const Def = require("./default")
 function error404 () {
     return (
         <Def>
-            {/* Was not rendering*/}
-            <link rel="stylesheet" href="./style.css"/>
             <main>
                 <h1>404: PAGE NOT FOUND</h1>
                 <div>
@@ -18,7 +16,6 @@ function error404 () {
                 <p>Oops, sorry, we can't find this page!</p>
             </main>
         </Def>
-
     )
 }
 

@@ -2,13 +2,20 @@ const React = require("react")
 const Def = require("../default")
 
 // Form layout view to create a new place when submitted
-function new_form () {
+function new_form (data) {
+    let message = ""
+        if (data.message) {
+            message = (
+                <h4 className="alert-danger">
+                    {data.message}
+                </h4>
+            )
+        }
     return (
         <Def>
-            {/* Was not rendering*/}
-            <link rel="stylesheet" href="../style.css"/>
             <main>
                 <h1>Add a New Place</h1>
+                {message}
                 <form method="POST" action="/places">
                     <div className="form-group">
                         <label htmlFor="name">Place Name</label>
@@ -32,7 +39,7 @@ function new_form () {
                     </div>
                     <div className="form-group">
                         <label htmlFor="founded">Founded Year</label>
-                        <input className="form-control" type="number" id="founded" name="founded" value={new Date().getFullYear()}/>
+                        <input className="form-control" type="number" id="founded" name="founded" defaultValue={new Date().getFullYear()}/>
                         <div>
                             <input className="btn btn-primary" type="submit" value="Add Place"/>
                         </div>
