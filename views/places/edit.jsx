@@ -35,7 +35,7 @@ function edit_form (data) {
                         </div>
                         <div className="form-group col-sm-6">
                             <br/>
-                            <input className="btn btn-primary" type="submit" value="update Place"/>
+                            <input className="btn btn-primary" type="submit" value="Edit Place"/>
                         </div>
                     </div>   
                 </form>
