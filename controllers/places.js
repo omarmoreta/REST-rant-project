@@ -165,9 +165,9 @@ router.delete("/:id", (req, res) => {
 
 // GET /place/:id/edit form
 router.get("/:id/edit", (req, res) => {
-  db.Place.findOne({ _id: req.params.id })
+  db.Place.findById(req.params.id)
     .then((place) => {
-      res.render(`/places/edit`, { place: place[id], id: id });
+      res.render("places/edit", { place });
     })
     .catch((err) => {
       console.log("err", err);

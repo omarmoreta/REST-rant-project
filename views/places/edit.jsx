@@ -33,11 +33,9 @@ function edit_form (data) {
                             <label htmlFor="founded">Founded Year</label>
                             <input className="form-control" type="number" id="founded" name="founded" defaultValue={data.place.founded}/>
                         </div>
-                        <div className="form-group col-sm-6">
-                            <br/>
-                            <input className="btn btn-primary" type="submit" value="Edit Place"/>
-                        </div>
                     </div>   
+                    <br/>
+                    <input className="btn btn-primary" type="submit" value="Edit Place"/>
                 </form>
             </main>
         </Def>
