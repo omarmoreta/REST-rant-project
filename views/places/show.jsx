@@ -95,7 +95,7 @@ function show (data) {
                     </div>
                     <div>
                         <label htmlFor="rant">Is this a rant? </label>             
-                        <input type="checkbox" id="rant" name="rant"/>                         
+                        <input type="checkbox" id="rant" name="rant" />                         
                     </div>
                     <div>
                         <label htmlFor="content">Comment: </label>
