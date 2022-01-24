@@ -1,12 +1,13 @@
 const React = require("react")
 const Def = require("../default")
 
+// Index layout view to display all of the places in the db
 function index (data) {
-    let placesFormatted = data.places.map((place, index) => {
+    let placesFormatted = data.places.map(place => {
       return (
         <div className="col-sm-6" key="{place.name}">
           <h2>
-            <a href={`/places/${index}`}>
+            <a href={`/places/${place.id}`}>
               {place.name}
             </a>
           </h2>

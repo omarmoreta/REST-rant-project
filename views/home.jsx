@@ -1,6 +1,7 @@
 const React = require("react")
 const Def = require("./default")
 
+// Home layout view
 function home () {
     return (
         <Def>
