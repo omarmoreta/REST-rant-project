@@ -1,5 +1,7 @@
 const mongoose = require("mongoose");
+require("dotenv").config();
 
+// Connecting mongodb using mongoose
 mongoose.connect(
   process.env.MONGO_URI,
   {
@@ -12,3 +14,4 @@ mongoose.connect(
 );
 
 module.exports.Place = require("./places");
+module.exports.Comment = require("./comment");
