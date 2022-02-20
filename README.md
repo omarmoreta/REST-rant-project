@@ -6,7 +6,7 @@ checkout the live app here: https://rest-rant-project.herokuapp.com/
 ### How to use
 
 Go to the add places tab to add a place. Click on the place link after adding a place to leave a comment.
-You can delete the comment or edit the place. You can also delete the place and/or the comment. Everything
+You can delete the comment or edit the place. You can also delete the place. Everything
 will be saved on a MongoDB database, so feel comfortable browsing freely!
 
 ### Routes table
