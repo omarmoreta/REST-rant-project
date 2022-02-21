@@ -21,7 +21,7 @@ function new_form (data) {
                 <div className="row">
                     <div className="form-group col-sm-6">
                         <label htmlFor="name">Place Name</label>
-                        <input className="form-control" id="name" name="name" defaultValue={goofy404} required />
+                        <input className="form-control" id="name" name="name" required />
                     </div>
                     <div className="form-group col-sm-6">
                         <label htmlFor="pic">Place Picture</label>
