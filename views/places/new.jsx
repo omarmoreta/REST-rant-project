@@ -1,5 +1,6 @@
 const React = require("react")
 const Def = require("../default")
+const goofy404 = require("../../public/images/goofy-404.jpg")
 
 // Form layout view to create a new place when submitted
 function new_form (data) {
@@ -20,7 +21,7 @@ function new_form (data) {
                 <div className="row">
                     <div className="form-group col-sm-6">
                         <label htmlFor="name">Place Name</label>
-                        <input className="form-control" id="name" name="name" required />
+                        <input className="form-control" id="name" name="name" defaultValue={goofy404} required />
                     </div>
                     <div className="form-group col-sm-6">
                         <label htmlFor="pic">Place Picture</label>
