@@ -16,7 +16,8 @@ router.get("/", (req, res) => {
 // POST /places
 router.post("/", (req, res) => {
   if (!req.body.pic) {
-    req.body.pic = "/images/goofy-404.jpg";
+    req.body.pic =
+      "https://images.unsplash.com/photo-1519146810018-be3639aba4ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80";
   }
   if (!req.body.city) {
     req.body.city = "Anytown";
