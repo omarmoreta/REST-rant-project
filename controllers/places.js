@@ -1,6 +1,5 @@
 const router = require("express").Router();
 const db = require("../models");
-const goofy404 = require("../public/images/goofy-404.jpg");
 
 // GET /places
 router.get("/", (req, res) => {
@@ -17,7 +16,7 @@ router.get("/", (req, res) => {
 // POST /places
 router.post("/", (req, res) => {
   if (!req.body.pic) {
-    req.body.pic = { goofy404 };
+    req.body.pic = "/images/goofy-404.jpg";
   }
   if (!req.body.city) {
     req.body.city = "Anytown";

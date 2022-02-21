@@ -1,7 +1,6 @@
 const React = require("react")
 const Def = require("../default")
 
-
 // Form layout view to create a new place when submitted
 function new_form (data) {
     let message = ""
