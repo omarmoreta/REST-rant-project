@@ -1,5 +1,6 @@
 const React = require("react")
 const Def = require("./default")
+import { Button } from "react-bootstrap"
 
 // Home layout view
 function home () {
@@ -14,7 +15,7 @@ function home () {
                     </div>
                 </div>
                 <a href="/places">
-                    <button className="btn-primary">Places Page</button>
+                    <Button variant="primary">Places Page</Button>
                 </a>
             </main>
         </Def>
