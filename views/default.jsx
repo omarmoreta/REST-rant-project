@@ -1,5 +1,7 @@
 const React = require("react")
-
+import { Container } from "react-bootstrap"
+import { Navbar } from "react-bootstrap"
+import { Nav } from "react-bootstrap"
 
 // Default layout for all the views
 function Def (html) {
@@ -11,19 +13,26 @@ function Def (html) {
                 <link rel="stylesheet" href="/css/style.css"/>
             </head>
             <body>
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="/">Home</a>
-                        </li>
-                        <li>
-                            <a href="/places">Places</a>
-                        </li>
-                        <li>
-                            <a href="/places/new">Add Places</a>
-                        </li>
-                    </ul>
-                </nav>
+                <Navbar className="justify-content-end" style={{ backgroundColor: "cornflowerblue" }} expand="lg">
+                    <Container fluid>
+                        <Navbar.Brand href="#">REST-Rant
+                        </Navbar.Brand>
+                        <Navbar.Toggle aria-controls="navbarScroll" />
+                        <Navbar.Collapse id="navbarScroll" >
+                        <Nav
+                            className="me-auto my-2 my-lg-0"
+                            style={{ maxHeight: '100px'}}                            
+                            navbarScroll
+                        >
+                            <Nav.Link href="/">Home</Nav.Link>
+                            <Nav.Link href="/places">Places</Nav.Link>
+                            <Nav.Link href="/places/new">
+                            Add Places
+                            </Nav.Link>
+                        </Nav>
+                        </Navbar.Collapse>
+                    </Container>
+                    </Navbar>
                 <div>
                     {html.children}
                 </div>
