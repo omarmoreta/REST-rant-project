@@ -1,5 +1,5 @@
-const router = require("express").Router();
-const db = require("../models");
+const router: any = require("express").Router();
+const db: any = require("../models");
 
 // GET /places
 router.get("/", (req, res) => {
