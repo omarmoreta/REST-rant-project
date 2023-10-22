@@ -9,7 +9,7 @@ mongoose.connect(
     useUnifiedTopology: true,
   },
   () => {
-    console.log("connected to mongo: ", process.env.MONGO_URI);
+    console.log("connected to mongo");
   }
 );
 
