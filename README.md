@@ -2,7 +2,7 @@
 
 REST-Rant is an app where users can review restaurants. Users can get, create, update, or delete restaurants and/or comments.
 
-Checkout the live app here: [https://rest-rant-project.herokuapp.com/](https://full-rest-rant.onrender.com/)
+Checkout the live app here: [Render deployment](https://full-rest-rant.onrender.com/)
 
 ### How to use
 
